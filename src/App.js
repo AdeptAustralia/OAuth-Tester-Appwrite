@@ -1,6 +1,7 @@
 import { BrowserRouter, Redirect, Route, Switch} from 'react-router-dom';
 import Profile from "./pages/Profile/Profile";
 import Login from "./pages/Login/Login";
+//import Callback from "./pages/Login/Callback";
 import Landing from "./pages/Landing/Landing";
 import { useGetUser } from "./hooks";
 
@@ -16,6 +17,9 @@ return(
       <Route path="/login">
         {user ? <Redirect to="/profile" /> : <Login dispatch={dispatch}/>}
       </Route>
+      {/*<Route path="/callback">
+        <Callback />
+      </Route>*/}
       <Route exact path="/">
         <Landing />
       </Route>

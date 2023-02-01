@@ -1,8 +1,8 @@
 import api from "../../api/api";
 
-export const loginWith = async (provider) => {
+export const loginWithAuthentik = async (provider) => {
     try {
-      await api.loginWith(provider);
+      await api.loginWithAuthentik();
     } catch(error) {
       console.log(error.message);
     }

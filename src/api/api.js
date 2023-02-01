@@ -14,23 +14,23 @@ let api = {
     return appwrite;
   },
 
-  loginWithZendesk: async () => {
+  loginWith: async (provider) => {
     try {
       await api.provider().account.createOAuth2Session(
-        "zendesk",
-        "http://localhost:3000/login",
-        "http://localhost:3000/login"
+        provider,
+        Server.loginurl,
+        Server.loginurl
       );
     } catch (error) {
       throw error;
     }
   },
 
-  loginWith: async (provider) => {
+  loginWithAuthentik: async (provider) => {
     try {
       await api.provider().account.createOAuth2Session(
-        provider,
-        Server.loginurl,
+        `authentik`,
+        Server.redirectUrl,
         Server.loginurl
       );
     } catch (error) {

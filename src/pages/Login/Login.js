@@ -1,24 +1,11 @@
-import { useState } from "react";
-import api from "../../api/api";
+//import { useState } from "react";
+//import api from "../../api/api";
 import {
   appwrite,
-  apple,
-  bitbucket,
-  discord,
-  facebook,
-  google,
-  github,
-  twitch,
-  twitter,
-  vk,
-  yahoo,
-  zendesk,
-  react,
-  tradeshift,
 } from "../icons";
 
 // Your OAuth Provider Functions
-import { loginWith } from "./loginWith";
+import { loginWithAuthentik } from "./loginWith";
 
 const Login = ({ dispatch }) => {
   return (
@@ -29,47 +16,10 @@ const Login = ({ dispatch }) => {
         <button
           type="submit"
           className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-          onClick={() => {loginWith(`discord`)}}
+          onClick={() => {loginWithAuthentik()}}
         >
-          {discord(12)}
+          {appwrite(12)}
         </button>
-        {/* <button
-          type="submit"
-          className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {facebook(12)}
-        </button>
-        <button
-          type="submit"
-          className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {bitbucket(12)}
-        </button>
-        <button
-          type="submit"
-          className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {github(12)}
-        </button>
-        <button
-          type="submit"
-          className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {google(12)}
-        </button> */}
-        <button
-          type="submit"
-          className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-          onClick={() => {loginWith(`zendesk`)}}
-        >
-          {zendesk(12)}
-        </button>
-        {/* <button
-          type="submit"
-          className="mx-auto mt-4 py-2 px-16 font-semibold rounded-lg shadow-md bg-white text-gray-900 border border-gray-900 hover:border-transparent hover:text-white hover:bg-gray-900 focus:outline-none disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {yahoo(12)}
-        </button> */}
       </div>
     </section>
   );
